@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/responsive.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+ <div id="main">
+  <div class="left">
+    <button>
+      <i class="ri-headphone-fill"></i>
+      <p>25 Music</p>
+    </button>
+    <button>
+      <i class="ri-home-fill"></i>
+      <p><a href="/profile">Home</a></p>
+    </button>
+    <button>
+      <i class="ri-search-line"></i>
+      <p><a href="/search">Search</a></p>
+    </button>
+    <div class="playlist">
+      <h2 style="color: blue;">Playlist</h2>
+      <%currentUser.playList[0].songs.forEach(song=>{%>
+          <div class="text" onclick="songCardClicked('<%=song.fileName%>')">
+          
+          <p><%=song.artist%></p>
+        </div>
+        <%})%>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right-top">
+      <div class="right-top-top">
+        <div class="arrow">
+          <i class="ri-arrow-left-s-line"></i>
+          <i class="ri-arrow-right-s-line"></i>
+        </div>
+        <div class="btn">
+          <h2>Premium Support Download</h2>
+          <a href="#">Sign up</a>
+          <button><a href="#">Log in</a></button>
+        </div>
+      </div>
+      <div class="right-top-bottom">
+        <a href="#">Spotify Playlist</a>
+        <a href="#"><span>Show all</span></a>
+      </div>
+    </div>
+    <div class="songcard">
+    <%currentUser.playList[0].songs.forEach(song=>{%>
+    <div class="song" onclick="songCardClicked('<%=song.fileName%>')">
+      <img src="/images/defaulsong.png" alt="">
+      <div class="text">
+      <h4><%=song.title%></h4>
+      <h5><%=song.artist%></h5>
+      <h5><%=song.album%></h5>
+    </div>
+    <div class="playButton">
+      <i class="ri-play-circle-fill"></i>
+    </div>
+    </div>
+    <%})%>
+    
+  </div>
+
+    <audio src="/stream/31a3ae7866a44dbb3359d86ca31271c960c98584" controls style="width: 60%; padding: -30px 0;"></audio>
+  </div>
+</div>
+<script>
+function songCardClicked(filename){
+  document.querySelector('audio').setAttribute('src',`/stream/${filename}`);
+  document.querySelector('audio').play();
+}
+</script>
+</body>
+</html>

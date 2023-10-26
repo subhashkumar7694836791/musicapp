@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify clone</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="logo">
+        </div>
+        <div class="name">
+            25 Music
+        </div>
+        <div class="developer">
+            <div class="upgrade">
+                Upgrade
+            </div>
+            <div class="ownername">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="owner">
+                <div class="ownernamespec"><%=userData.username%></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921160.png" alt="downarrow">
+            </div>
+        </div>
+    </div>
+    <div class="control">
+        <nav class="navigation">
+            <div class="top">
+                <ul class="first">
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home"> Home</li>
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="search"> Search</li>
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/1164/1164651.png" alt="library"> Your Library</li>
+                </ul>
+                <ul class="second">
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/3384/3384379.png" alt="create"> Create Playlist</li>
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/9460/9460266.png" alt="like"> Liked Songs</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul class="bottom">
+                    <li>Your Top Songs 2022</li>
+                    <li>Trending Valentine Hit</li>
+                    <li>Your Top Songs 2021</li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="banner">
+                <div class="workingbanner">
+                    <div class="bannerpicture">
+                        <img src="https://i.pinimg.com/originals/dc/c9/ce/dcc9cea8525b59b91d1a6ed0e27fff59.gif" alt="bannerpicture">
+                    </div>
+                    <div class="details">
+                      
+                        <div class="names">
+                           <%=userData.username%> is Admin
+                        </div>
+                       
+                        <div class="about">
+                            Listen to all of your favorite English Hits in one place
+                        </div>
+                        <div class="buttons">
+                            <input class="play" type="button" value="play">
+                            <input class="follow" type="button" value="follow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="greeting">
+                <div class="good">
+                    Good Evening
+                </div>
+            </div>
+            <div class="cards">
+                <div class="matrix">
+                    <div class="music">
+                        
+                        <img src="/images/defaulsong.png" alt="oneheart">
+                        <div class="artist" onclick="songCardClicked('<%=userData.fileName%>')">
+                            <div class="name">
+                                <%=userData.artist%>
+                            </div>
+                            <div class="genere">
+                                <%=userData.title%>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="music">
+                        <img src="https://pbs.twimg.com/profile_images/1463449719615725569/UGs6CpTF_400x400.jpg" alt="ludovico">
+                        <div class="artist">
+                            <div class="name">
+                                Ludovico Einaudi
+                            </div>
+                            <div class="genere">
+                                Classical
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music">
+                        <img src="https://pyxis.nymag.com/v1/imgs/8ee/9b2/daf79f1b992e86ab665acbbef7f7082c71-13-one-direction-friends.2x.rsocial.w600.jpg" alt="onedirection">
+                        <div class="artist">
+                            <div class="name">
+                                One Direction
+                            </div>
+                            <div class="genere">
+                                Pop
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBgqfwYgerQKArZ5ZUo0nnZxkZ91HujlWsDczz3imDJPDlIZC7opkdRN6Fe-OlXTCpIms&usqp=CAU" alt="NF">
+                        <div class="artist">
+                            <div class="name">
+                                NF
+                            </div>
+                            <div class="genere">
+                                Pop, EDM
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music">
+                        <img src="https://uproxx.com/wp-content/uploads/2022/05/xxxt-grid-uproxx.jpg?w=710" alt="xxxtentacion">
+                        <div class="artist">
+                            <div class="name">
+                                XXXtentacion
+                            </div>
+                            <div class="genere">
+                                Pop
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music">
+                        <img src="https://vz.cnwimg.com/wp-content/uploads/2020/03/tw.jpg" alt="weeekend">
+                        <div class="artist">
+                            <div class="name">
+                                Weekend
+                            </div>
+                            <div class="genere">
+                                Pop, EDM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="audio">
+        <div class="lyrics">
+            <div class="real">
+                <div class="text">
+     
+                    It will never change, baby
+                    It will never change, baby
+                    It will never change me and you
+                </div>
+            </div>
+        </div>
+        <div class="function">
+            <div class="music">
+                <img src="https://images.genius.com/31c7d09c4aa1b324bb911d0db72453a3.1000x1000x1.jpg" alt="">
+                <div class="details">
+                    <div class="name">
+                        Night Change
+                    </div>
+                    <div class="artist">
+                        One Direction
+                    </div>
+                </div>
+                <div class="love">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2589/2589175.png" alt="love">
+                </div>
+            </div>
+            <div class="playback">
+                <div class="upper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/724/724979.png" alt="shuffle">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3318/3318703.png" alt="back">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2088/2088562.png" alt="pause" class="pause">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4211/4211386.png" alt="forward">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4146/4146819.png" alt="loop">
+                </div>
+                <div class="lower">
+                    <div class="text">
+                        0:00
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="text">
+                        3:46
+                    </div>
+                </div>
+            </div>
+            <audio src="/stream/31a3ae7866a44dbb3359d86ca31271c960c98584" controls></audio>
+            <div class="control">
+                <div class="images">
+                    <img src="https://cdn-icons-png.flaticon.com/512/26/26615.png" alt="mic">
+                    <img src="https://cdn-icons-png.flaticon.com/512/98/98068.png" alt="queue">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2777/2777142.png" alt="device">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25695.png" alt="volume">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function songCardClicked(filename){
+  document.querySelector('audio').setAttribute('src',`/stream/${filename}`);
+  document.querySelector('audio').play();
+}
+    </script>
+    
+</body>
+</html>

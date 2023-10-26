@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    background-color: black;
+    margin: 0px;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 8vh;
+    /* width: 100vw; */
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vh;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px grey;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    padding-top: 1vh;
+    padding-left: 1vh;
+    height: 5vh;
+    width: 5vh;
+}
+.name{
+    padding-left: 1vh;
+}
+.developer{
+    margin-left: 60vw;
+    margin-right: 0px;
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+.upgrade{
+    margin-right: 10vh;
+    border-color: grey;
+    border: 0.25vh;
+    border-radius: 50vh;
+    padding: 1vh;
+    border-style: solid;
+
+}
+.ownername{
+    margin-left: 10vh;
+    border-color: grey;
+    border: 0.25vh;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    border-radius: 50vh;
+    border-style: solid;
+}
+.ownernamespec{
+    padding-right: 1vh;
+}
+.ownername img{
+    height: 3vh;
+    width: 3vh;
+    padding-right: 1vh;
+}
+.control{
+    display: flex;
+    background-color: green;
+    height: 75vh;
+}
+nav.navigation{
+    width: 10vw;
+    display: flex;
+    font-size: 2.5vh;
+    font-family: 'Signika', sans-serif;
+    flex-direction: column;
+    color: grey;
+}
+.top{
+    padding-top: 3vh;
+    padding-bottom: 4vh;
+    padding-right: 1vh;
+    padding-left: 1vh;
+}
+.bottom{
+    padding-top: 2vh;
+    border-top: 1px grey;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-right: 1vh;
+    padding-left: 1vh;
+    border-style: solid;
+}
+ul.first{
+    list-style-type: none;
+    padding-bottom: 4vh;
+    padding-left: 1vh;
+    align-items: center;
+}
+ul.first li{
+    padding-top: 1vh;
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+    align-items: center;
+}
+ul.first li:hover{
+    color: white;
+}
+ul.first li img{
+    width: 2.5vh;
+    height: 2.5vh;
+    padding-right: 1vh;
+    background-color: white;
+    cursor: pointer;
+    filter: invert();
+}
+ul.second{
+    list-style-type: none;
+    align-items: center;
+    padding-left: 1vh;
+}
+ul.second li{
+    padding-top: 1vh;
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+    align-items: center;
+}
+ul.second li:hover{
+    color: white;
+}
+ul.bottom{
+    list-style-type: none;
+    padding-left: 1vh;
+}
+ul.bottom li{
+    padding-top: 1vh;
+    cursor: pointer;
+}
+ul.bottom li:hover{
+    color: white;
+}
+ul.second li img{
+    width: 2.5vh;
+    height: 2.5vh;
+    padding-right: 1vh;
+    background-color: white;
+    cursor: pointer;
+    filter: invert();
+}
+.container{
+    width: 90vw;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    flex-direction: column;
+}
+.banner{
+    height: 45vh;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    margin-top: 3vh;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.workingbanner{
+    width: 87vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    border: 0px;
+    border-style: solid;
+    border-radius: 25px;
+}
+.bannerpicture img{
+    width: 40vh;
+    height: 30vh;
+    margin-left: 4.5vh;
+    margin-right: 4.5vh;
+    border-radius: 17%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+}
+.details .names{
+    font-size: 10vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding-bottom: 1vh;
+    
+}
+.details .about{
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+}
+.buttons{
+    display: flex;
+}
+input[type=button]{
+    background-color: rgb(0, 209, 0);
+    color: black;
+    border: 0px;
+    border-style: solid;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5vh;
+    margin-right: 1.5vh;
+    /* margin-top: auto; */
+    width: 13vh;
+    height: 6vh;
+    cursor: pointer;
+}
+input[type=button]:hover{
+    width: 13.5vh;
+    height: 6.5vh;
+}
+.greeting{
+    font-family: 'Inter', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    width: 87vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+
+}
+.greeting .good{
+    margin-left: 5vh;
+    background-color: transparent;
+}
+.cards{
+    margin-top: 1vh;
+    width: 87vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: yellow;
+    align-items: center;
+    overflow-y: auto;
+}
+.cards::-webkit-scrollbar{
+    display: none;
+}
+.cards .matrix{
+    width: 85vw;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+.cards .matrix .music{
+    width: 25vw;
+    height: 15vh;
+    background-color:rgb(27, 27, 27);
+    margin-bottom: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border: 0px 0px solid;
+    border-radius: 2vh;
+    display: flex;
+}
+.cards .matrix .music img{
+    border: 0px solid;
+    border-radius: 2vh;
+}
+.cards .matrix .music .artist{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    background-color: transparent;
+    overflow-x: auto;
+}
+.cards .matrix .music .artist::-webkit-scrollbar{
+    display: none;
+}
+.cards .matrix .music .artist .name{
+    font-size: 3vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    /* overflow-x: hidden; */
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+
+}
+.cards .matrix .music .artist .genere{
+    font-size: 2vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    color: rgba(255, 255, 255, 0.736);
+    background-color: transparent;
+}
+.audio{
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+.audio .lyrics{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+    color: white;
+}
+.audio .lyrics .real{
+    width: 50vw;
+    height: 5vh;
+    background-color: rgb(27, 27, 27);
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    padding-top: 0vh;
+    padding-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+}
+.audio .lyrics .real .text{
+    /* margin-top: 2vh; */
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    /* padding-top: 2vh; */
+}
+.audio .lyrics .real::-webkit-scrollbar{
+    display: none;
+}
+.audio .function{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: auto;
+    background-color: rgb(27, 27, 27);
+    height: 11vh;
+}
+.audio .function .music{
+    width: 20vw;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5vh;
+    background-color: transparent;
+}
+.audio .function .music img{
+    width:10vh;
+    height: 10vh;
+    border: 0px solid;
+    border-radius: 2vh;
+}
+.audio .function .music .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin-left: 2vh;
+    padding-bottom: 1vh;
+    background-color: transparent;
+}
+.audio .function .music .details .name{
+    /* display: flex; */
+    /* justify-content: left; */
+    font-size: 3vh;
+    /* background-color: brown; */
+    justify-content: left;
+    display: flex;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 0px;
+}
+.audio .function .music .details .artist{
+    font-size: 2vh;
+    background-color: transparent;
+
+}
+.audio .function .music .love{
+    background-color: transparent;
+}
+.audio .function .music .love img{
+    /* filter: invert(); */
+    background-color: transparent;
+    padding: 0px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    width: 4vh;
+    height: 4vh;
+    /* background-color: ; */
+    /* fill: red; */
+}
+.audio .function .playback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    width: 60vw;
+    height: 4vh;
+    background-color: transparent;
+}
+.audio .function .playback .upper{
+    width: 50vw;
+    background-color: transparent;
+    height: 6vh;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.audio .function .playback .upper img{
+    width: 3vh;
+    height:3vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    background-color: transparent;
+    filter: invert();
+
+}
+.audio .function .playback .upper img.pause{
+    width: 4vh;
+    height: 4vh;
+}
+.audio .function .playback .lower{
+    width: 50vw;
+    background-color: transparent;
+    /* height: 5vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+    color: white;
+}
+.audio .function .playback .lower .line{
+    width: 50vh;
+    height: 1vh;
+    background-color: white;
+    border: 0px 0px 0px 0px solid;
+    border-radius: 1vh;
+}
+.audio .function .playback .lower .text{
+    background-color: transparent;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+.audio .function .control{
+    width: 20vw;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.audio .function .control .images{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+}
+.audio .function .control .images img{
+    width: 3vh;
+    height: 3vh;
+    background-color: transparent;
+    filter: invert();
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+.audio .function .control .images .line{
+    width: 13vh;
+    height: 1vh;
+    background-color: white;
+    border: 0px 0px 0px 0px solid;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}

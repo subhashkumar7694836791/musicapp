@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/search.css">
+</head>
+
+<body>
+    <div class="left">
+    <!-- <input type="search" placeholder="enter music title" style="padding: 10px;"> -->
+   
+</div>
+<div class="page-container">
+    <div class="iphone-wrapper">
+      <!-- Search Bar --> 
+        <div class="search-bar">
+           <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+             </section>
+          </nav>
+      </div>
+      
+    <div class="search-canvas">
+     <ul class="side-left-menu">
+       <li class="active-item"><i class="fa fa-search"></i>Search</li>
+       <ul>
+          <li class="voice-search" style="display: flex;">
+            <input class="radius" type="text" placeholder="Type an Artist, Song, Lyrics">
+            <button onclick="songSearch()" style="padding: 10px; cursor: pointer;">search</button>
+
+         </li>
+       </ul>
+       <li><i class="fa fa-spotify"></i>Browse</li>
+       <li><i class="fa fa-spotify"></i>Running</li>
+       <li><i class="fa fa-spotify"></i>Activity</li>
+       <li><i class="fa fa-spotify"></i>Radio</li>
+       <li><i class="fa fa-spotify"></i>Your Music</li>
+       <li><i class="fa fa-spotify"></i>Settings</li>
+      </ul>
+      <div class="right">
+        <div class="musics"></div>
+    </div>
+    </div>
+    
+    <div class="content-canvas">
+      <ul class="search-results"> 
+        <li class="list-header">
+          
+        </li>
+        <ul>
+    </div>
+    
+    </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        async function songSearch() {
+           const result=await axios.post('/search',{
+                search:document.querySelector('input').value
+            })
+            // console.log(result);
+            let clutter=''
+            result.data.songs.forEach(song=>{
+                clutter +=`<div class="song" onclick="songCardClicked('${song.fileName}')">
+      <img src="/images/defaulsong.png" alt="">
+      <div class="text">
+      <h4>${song.title}</h4>
+      <h5>${song.artist}</h5>
+      <h5>${song.album}</h5>
+    </div>
+    <div class="playButton">
+      <i class="ri-play-circle-fill"></i>
+    </div>
+    </div>`
+            })
+            document.querySelector('.musics').innerHTML+=clutter
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- vhkj -->
+
+
+<!-- <html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Music Player</title>
+</head>
+<body>
+  
+      
+
+    </body>
+    </html>
+</body>
+</html> -->

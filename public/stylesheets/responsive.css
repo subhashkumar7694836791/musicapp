@@ -1,0 +1,175 @@
+@media screen and (max-width:500px){
+   
+#main{
+  
+  display: flex;
+  gap: 10px;
+  background-color: #000000;
+}
+.left{
+  height: 100%;
+  width: 20%;
+  margin-top: 20px;
+  background-color: #121212;
+}
+.left button{
+  
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 32px;
+  outline: none;
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  align-items: center;
+}
+.left button p{
+    display: none;
+  font-size: 25px;
+}
+.left button:hover{
+  background-color: #333;
+}
+.right{
+  height: 100%;
+  width: 80%;
+  
+  background-color: #121212;
+
+}
+.right-top{
+  
+  width: 100%;
+
+}
+.right-top-top{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: #2d2d2d;
+  justify-content: space-between;
+}
+.right-top-top .arrow{
+  font-size:13px;
+  
+}
+.right-top-top .arrow i{
+  font-weight: 200;
+  color: #6b6767;
+  cursor: pointer;
+  font-family: Poppins;
+}
+.right-top-top .btn{
+  display: flex;
+  align-items: center;
+  
+  width: 65%;
+  justify-content: space-around;
+}
+.right-top-top .btn h2{
+  display: none;
+}
+.right-top-top .btn a{
+  font-size: 2vw;
+ 
+  font-weight: 300;
+  color: #6b6767;
+  text-decoration: none;
+  font-family: Poppins;
+}
+.right-top-top .btn button{
+  border-radius: 40px;
+}
+.right-top-top .btn button a{
+  color: #000000;
+}
+.right-top-bottom{
+  height: 40%;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  
+  padding: 0 2vw;
+  /* border: 1px solid red; */
+}
+.right-top-bottom a{
+  font-size: 2.5vw;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: Poppins;
+}
+.right-top-bottom a span{
+  font-size: 1.8vw;
+  font-weight: 300;
+}
+.right-top-bottom a:hover{
+  cursor: pointer;
+text-decoration:underline;
+}
+.songcard{
+  position: relative;
+  height: calc(100% - 150px);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.song{
+  
+  position: relative;
+  height: 250px;
+  margin: 12px;
+  width: 480px;
+  background-color: #2d2d2d;
+  text-align: center;
+  padding: 0 .3vw;
+  border: .2px solid white;
+}
+.song img{
+  padding: 1vw;
+  height:160px;
+  width:160px;
+}
+.song .text h4,.song .text h5{
+  max-width: 400px;
+  font-family: Poppins;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.song .text h5{
+  font-size: 13px;
+}
+.song .text{
+  padding: 1vw 0;
+  width: 100%;
+  height: 110px;
+  
+}
+.song .playButton{
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%,-50%);
+}
+.song .playButton i{
+  opacity: 0;
+  font-size: 50px;
+  color: green;
+  cursor: pointer;
+}
+.song:hover .playButton i{
+  opacity: 1;
+}
+audio{
+  position: absolute;
+  bottom: 1%;
+  left: 22%;
+}
+}
