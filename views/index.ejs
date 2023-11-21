@@ -42,19 +42,20 @@
         </div>
         <div class="btn">
           <h2>Premium Support Download</h2>
-          <a href="#">Sign up</a>
-          <button><a href="#">Log in</a></button>
+          <a href="/reset">reset</a>
+          <a href="/auth">Sign up</a>
+          <button><a href="/login">Log in</a></button>
         </div>
       </div>
       <div class="right-top-bottom">
         <a href="#">Spotify Playlist</a>
-        <a href="#"><span>Show all</span></a>
+        <a href="/uploadMusic"><span>Upload</span></a>
       </div>
     </div>
     <div class="songcard">
     <%currentUser.playList[0].songs.forEach(song=>{%>
     <div class="song" onclick="songCardClicked('<%=song.fileName%>')">
-      <img src="/images/defaulsong.png" alt="">
+      <img src="/poster/<%= song.poster%>" alt="">
       <div class="text">
       <h4><%=song.title%></h4>
       <h5><%=song.artist%></h5>

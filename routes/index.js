@@ -12,6 +12,7 @@ var mongoose=require('mongoose');
 var multer=require('multer');
 var {Readable}=require('stream');
 var crypto=require('crypto');
+const { log } = require('console');
 mongoose.connect('mongodb://0.0.0.0/dusraspt').then(function(){
   console.log('mongodb successfully connected');
 }).catch(function(err){
@@ -106,15 +107,15 @@ router.get('/uploadMusic',isLoggedIn,isAdmin,function(req, res,next){
   res.render('uploadMusic')
 });
 
-// router.get('/poster/:fileName',function(req,res,next){
-//   gfsBucketPoster.openUploadStream('req.params.fileName').pipe(res);
-// });
+router.get('/poster/:posterName',function(req,res,next){
+  gfsBucketPoster.openDownloadStreamByName(req.params.posterName).pipe(res);
+});
 
 router.post(
 '/login',
 passport.authenticate('local',{
 successRedirect:'/',
-failureRedirect:'/login',
+failureRedirect:'/auth',
 }),
 (req,res,next) => {}
 );
@@ -192,4 +193,19 @@ router.post('/search',async function(req,res,next){
     songs:searchMusic
   })
 })
+router.get('/reset',function(req,res,next){
+  res.render('reset');
+})
+router.post('/reset',async function(req,res,next) {
+  try {
+    await req.user.changePassword(
+      req.body.oldpassword,
+      req.body.newpassword
+    );
+    req.user.save()
+    res.redirect('/auth')
+  } catch (error) {
+    console.log(error);
+  }
+});
 module.exports = router;
